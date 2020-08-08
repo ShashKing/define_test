@@ -3,6 +3,7 @@ class AuthorSerializer < ActiveModel::Serializer
 
 	  private
 	  def book_name
+	  	debugger
 	  	book_list = []
 			AuthorBook.where(author_id: id).each do |authorbook|
 				Book.where(id: authorbook.book_id).each do |book|
